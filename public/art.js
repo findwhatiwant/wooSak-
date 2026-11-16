@@ -14,7 +14,7 @@ export function createArtwork(canvas, variant = 'wave', { animated = false, inte
   const texture = ctx.createPattern(noise, 'repeat');
   function draw(time) {
     const w = width, h = height, s = Math.min(w * .73, h * 1.27), t = time * .00013;
-    ctx.fillStyle = variant === 'topography' ? '#dbdbd3' : '#101010'; ctx.fillRect(0, 0, w, h);
+    ctx.fillStyle = '#000'; ctx.fillRect(0, 0, w, h);
     ctx.save(); ctx.translate(w / 2, h / 2);
     if (variant === 'wave' || variant === 'drift') {
       const rows = variant === 'drift' ? 88 : 112;

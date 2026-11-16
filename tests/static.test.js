@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, stat } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
+import { youtubeSources } from '../public/youtube.js';
 
 const root = new URL('../public/', import.meta.url);
 const pages = new URL('https://artist.github.io/artworkWebsite/');
@@ -26,6 +27,7 @@ test('browser module imports and content manifest exist and use relative paths',
   const content = JSON.parse(await readFile(new URL('content/works.json', root), 'utf8'));
   assert.ok(Array.isArray(content));
   for (const work of content) {
+    if (work.youtubeId) { assert.ok(youtubeSources(work.youtubeId).embed); continue; }
     assert.ok(new URL(work.media, pages).pathname.startsWith('/artworkWebsite/media/'));
     assert.ok((await stat(new URL(work.media, root))).isFile());
   }
