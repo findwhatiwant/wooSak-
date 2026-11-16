@@ -1,4 +1,4 @@
-# VOID — 흑백 인터랙티브 아트 아카이브
+# wooSak! — 흑백 인터랙티브 아트 아카이브
 
 미디어 아트, 앰비언트 사운드, 이미지를 전시하는 반응형 웹사이트입니다. 순수 HTML/CSS/JavaScript로 제작했으며, 공개 사이트는 서버나 외부 서비스 없이 **GitHub Pages**에서 동작합니다. 외부 폰트·라이브러리는 사용하지 않습니다. 유튜브 작품은 YouTube 썸네일과 내장 플레이어를 불러옵니다.
 
@@ -59,7 +59,7 @@ git push
 
 | 파일 | 용도 |
 | --- | --- |
-| `public/index.html` | VOID 이름, 소개, 제목, 메타 설명 |
+| `public/index.html` | wooSak! 이름, 소개, 제목, 메타 설명 |
 | `public/style.css` | 색상, 타이포그래피, 여백, 반응형 레이아웃 |
 | `public/art.js` | 생성형 아트와 포인터 반응 |
 | `public/sound.js` | 앰비언트 사운드 합성 |
